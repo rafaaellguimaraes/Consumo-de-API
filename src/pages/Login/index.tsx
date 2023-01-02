@@ -10,6 +10,7 @@ export default function Login() {
         <small>Opa</small>
       </Title>
       <Paragrafo>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, quos.</Paragrafo>
+      <button type="button">Enviar</button>
     </Container>
   )
 }
