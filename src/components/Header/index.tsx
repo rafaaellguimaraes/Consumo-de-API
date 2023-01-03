@@ -8,11 +8,12 @@ import { useSelector } from 'react-redux'
 //Declarando os tipos das variáveis
 interface State {
   botaoClicado: boolean
+  example: any
 }
 
 export default function Header() {
   //Com o useSelector conseguimos ler nosso state. state vai ser do tipo boolean e retorna o state.botaoClicado
-  const botaoClicado = useSelector((state: State) => state.botaoClicado)
+  const botaoClicado = useSelector((state: State) => state.example.botaoClicado)
   return (
     <Nav>
       <Link to='/'><FaHome size={24}/></Link>

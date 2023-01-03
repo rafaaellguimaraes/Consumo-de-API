@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Paragrafo, Title } from "./styled";
 import { Container } from "../../styles/GlobalStyles";
 import { useDispatch } from 'react-redux'
+import { clicaBotao } from "../../store/modules/example/actions";
 
 export default function Login() {
   //Dispara quantas ações que eu quiser que ele dispare e depois trato os dados no Store
@@ -10,10 +11,8 @@ export default function Login() {
   //Função chamada ao clicar no botão enviar. Ela vai prevenir que a pagina seja recarregada (default prevent) e depois usa o dispatch para disparar uma ação
   function handleClick(e: any){
     e.preventDefault();
-
-    dispatch({
-      type: 'BOTAO_CLICADO',
-    })
+    //A função clicaBotão vem do arquivo actions.tsx
+    dispatch(clicaBotao())
   }
 
   return (
