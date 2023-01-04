@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Paragrafo, Title } from "./styled";
 import { Container } from "../../styles/GlobalStyles";
 import { useDispatch } from 'react-redux'
-import { clicaBotao } from "../../store/modules/example/actions";
+import { clicaBotaoRequest, clicaBotaoFailure, clicaBotaoSuccess } from "../../store/modules/example/actions";
 
 export default function Login() {
   //Dispara quantas ações que eu quiser que ele dispare e depois trato os dados no Store
@@ -12,7 +12,7 @@ export default function Login() {
   function handleClick(e: any){
     e.preventDefault();
     //A função clicaBotão vem do arquivo actions.tsx
-    dispatch(clicaBotao())
+    dispatch(clicaBotaoRequest())
   }
 
   return (
