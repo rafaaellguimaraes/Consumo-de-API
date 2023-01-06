@@ -8,7 +8,7 @@ import { toast } from 'react-toastify'
 const requisicao = (): Promise<void> => new Promise((resolve, reject) => {
   setTimeout(() => {
       resolve();
-  }, 2000);
+  }, 600);
 });
 
 function* exampleRequest(): Generator<any, void, any>{
